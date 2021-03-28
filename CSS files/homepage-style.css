@@ -84,6 +84,8 @@ hr{
 }
 
 
+
+
 .footer-class{
     width: 100%;
     height: 20vh;
@@ -122,4 +124,35 @@ hr{
 
 .footer-icon3:hover{
     height: 24%;
+}
+
+
+.contact-us-div h1{
+    color: grey;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.write-us-div h2{
+    color: grey;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.write-us-div{
+    margin: 0% 25%;
+}
+
+.write-us-div form button{
+    margin: 2% 42%;
+}
+
+.reach-us-heading{
+    color: grey;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.reach-us-row{
+    margin: 3% 10%;
 }
