@@ -17,6 +17,12 @@ body{
 }
 
 
+hr{
+    margin:150px auto;
+    border-top: 10px dotted grey;
+    width: 100px; 
+}
+
 
 
 .main-div{
@@ -33,12 +39,8 @@ body{
 }
 
 
-hr{
-    margin:80px auto;
-    border-top: 10px dotted grey;
-    width: 100px;
-    
-}
+
+
 
 
 .footer-class{
