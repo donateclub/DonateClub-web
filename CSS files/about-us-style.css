@@ -1,0 +1,134 @@
+body{
+    background-color: #74f9ff;
+}
+
+#brand-logo-image{
+    height: 15%;
+    width: 15%;
+    margin:0%;
+}
+
+#brand-logo-content{
+    display: inline-block;
+}
+
+.nav-color{
+    background-color: #00e0ff;
+}
+
+
+
+
+.main-div{
+    margin: 5% 15%;    
+}
+
+.para{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.para h3{
+    margin-bottom: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hr{
+    margin:150px auto;
+    border-top: 10px dotted grey;
+    width: 100px;
+    
+}
+
+
+.footer-class{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(230, 213, 213);
+    margin-top: 5rem;
+}
+
+.footer-class p{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-icon1{
+    margin-top: 1%;
+    margin-left: 43%;
+}
+
+.footer-icon2{
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.footer-icon3{
+    margin-top: 1%;
+    margin-left: 2%;
+}
+.footer-icon1:hover{
+    height: 24%;
+}
+
+
+.footer-icon2:hover{
+    height: 24%;
+}
+
+.footer-icon3:hover{
+    height: 24%;
+}
+
+
+.contact-us-div h1{
+    color: grey;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.write-us-div h2{
+    color: grey;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.write-us-div{
+    margin: 0% 25%;
+}
+
+.write-us-div form button{
+    margin: 2% 42%;
+}
+
+.reach-us-heading{
+    color: grey;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.reach-us-row{
+    margin: 3% 10%;
+}
