@@ -97,25 +97,29 @@ hr{
     margin-top: 20px;
 }
 
-.footer-icon{
-    height: 35%;
-    padding-top: 10px;
-    text-align: center;
+.footer-icon1{
+    margin-top: 1%;
+    margin-left: 43%;
 }
 
-.footer-icon img{
-   margin-right: 30px;
+.footer-icon2{
+    margin-top: 1%;
+    margin-left: 2%;
 }
 
+.footer-icon3{
+    margin-top: 1%;
+    margin-left: 2%;
+}
 .footer-icon1:hover{
-    height: 100%;
+    height: 24%;
 }
 
 
 .footer-icon2:hover{
-    height: 100%;
+    height: 24%;
 }
 
 .footer-icon3:hover{
-    height: 100%;
+    height: 24%;
 }
