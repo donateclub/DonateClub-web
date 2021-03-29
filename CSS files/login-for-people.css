@@ -44,20 +44,23 @@ body{
 .top-buttons a:hover{
     background-color: #abe9f1;
 }
-.first-button{
-    border-bottom: 1px solid green;
-}
 
-.second-button{
+.first-button{
     border: 1px solid green;
     border-top-right-radius: 5%;
     border-top-left-radius: 5%;
+    border-bottom-right-radius: 5%;
     border-bottom: none;
 }
 
-.main-box button{
-    margin-left: 30%;
+.second-button{
+    border-bottom: 1px solid green;
 }
+
+.main-box button{
+    margin-left: 40%;
+}
+
 
 .footer-class{
     width: 100%;
