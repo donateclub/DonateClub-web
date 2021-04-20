@@ -137,7 +137,7 @@
         .then((products) => products.forEach(addProduct));
       function addProduct(item, index) {
         document.getElementById("products").innerHTML +=
-          '<a href="../HTML files/product-page.html?item='+item.pk+'"><div id="product"> <div> <img src="'+item.image+'" width=80> </div> <div> '+item.title+' </div> </div></a>'
+          '<a href="../HTML files/product-page.html?item='+item.pk+'"><div id="product"> <div> <img src="'+item.image+'" width=200> </div> <div> '+item.title+' </div> </div></a>'
       }
     </script>
   </body>
