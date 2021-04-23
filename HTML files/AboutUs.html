@@ -10,6 +10,10 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="../CSS files/homepage-style.css">
   <link rel="stylesheet" href="../CSS files/about-us-style.css">
+
+  <!-- fonts style  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
   <title>Donation Club</title>
 </head>
 
@@ -24,7 +28,7 @@
 
 
   <!-- NAVIGATION BAR  -->
-  <nav class="navbar navbar-expand-lg navbar-light nav-color navbar-transparent">
+  <nav class="navbar navbar-expand-lg navbar-light nav-color navbar-transparent" id="navbar_top">
     <a class="navbar-brand" href="../index.html">
       <img id="brand-logo-image" src="../Images/brand-logo.png">
       <h3 id="brand-logo-content">Donation Club</h3>
@@ -290,6 +294,23 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        document.getElementById('navbar_top').classList.add('fixed-top');
+        // add padding top to show content behind navbar
+        navbar_height = document.querySelector('.navbar').offsetHeight;
+        document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('navbar_top').classList.remove('fixed-top');
+         // remove padding top from body
+        document.body.style.paddingTop = '0';
+      } 
+  });
+}); 
+    </script>
 </body>
 
 </html>

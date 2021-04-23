@@ -1,5 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #74f9ff;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #brand-logo-image{
@@ -13,7 +18,11 @@ body{
 }
 
 .nav-color{
-    background-color: #00e0ff;
+    background-color: #74f9ff;
+    transition:  border 2s ease-in-out;
+}
+.nav-color a:hover {
+    border-bottom: 3px solid #b34180;
 }
 
 .Intro-div{
@@ -26,18 +35,16 @@ body{
 
 .awards-div{
     margin: 4px 1px;
-    /* border: 1px solid black; */
 }
 
 .awards-col{
-    /* border: 1px solid black; */
     text-align: center;
     padding: 6% 4px;
-    background-color: #ff7a00;
+    background-color: #c7ffd8;
 }
-
 #middle-award-col{
-    background-color: #ffe227;
+    background-color: #e4fbff;
+    
 }
 .awards-col p{
     font-weight: 8%;
@@ -113,6 +120,7 @@ hr{
     margin-top: 1%;
     margin-left: 2%;
 }
+/*
 .footer-icon1:hover{
     height: 24%;
 }
@@ -124,7 +132,7 @@ hr{
 
 .footer-icon3:hover{
     height: 24%;
-}
+} */
 
 
 .contact-us-div h1{

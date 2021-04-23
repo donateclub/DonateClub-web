@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="CSS files/homepage-style.css">
+
+
+  <!-- fonts style  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
   <title>Donation Club</title>
 </head>
 
@@ -19,7 +24,7 @@
 
 <body>
   <!-- NAVIGATION BAR  -->
-  <nav class="navbar navbar-expand-lg navbar-light nav-color navbar-transparent">
+  <nav class="navbar navbar-expand-lg navbar-light nav-color navbar-transparent" id="navbar_top">
     <a class="navbar-brand" href="#">
       <img id="brand-logo-image" src="Images/brand-logo.png">
       <h3 id="brand-logo-content">Donation Club</h3>
@@ -87,9 +92,11 @@
   </nav>
 
   <!-- INTRO IMAGE -->
-  <div class="Intro-div">
-    <!-- Add some content -->
-  </div>
+  <a href="#login-signup">
+        <div class="Intro-div">
+          <!-- Add some content -->
+        </div>
+  </a>
 
 
 
@@ -97,18 +104,15 @@
   <div class="row awards-div">
 
     <div class="col-sm-12 col-md-4 awards-col">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptate perspiciatis atque aspernatur placeat
-        quaerat, unde est ex magnam optio. Placeat, assumenda voluptates a ea ab delectus velit saepe eligendi.</p>
+      <p>“We make a living by what we get, but we make a life by what we give.”<br> <b> - Winston Churchill</b></p>
     </div>
 
     <div class="col-sm-12 col-md-4 awards-col" id="middle-award-col">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptate perspiciatis atque aspernatur placeat
-        quaerat, unde est ex magnam optio. Placeat, assumenda voluptates a ea ab delectus velit saepe eligendi.</p>
+      <p>“Alone we can do so little; together we can do so much”<br> <b> - Helen Keller </b></p>
     </div>
 
     <div class="col-sm-12 col-md-4 awards-col">
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla voluptate perspiciatis atque aspernatur placeat
-        quaerat, unde est ex magnam optio. Placeat, assumenda voluptates a ea ab delectus velit saepe eligendi.</p>
+      <p>“I don’t think you ever stop giving. I really don’t. I think it’s an on-going process. And it’s not just about being able to write a check. It’s being able to touch somebody’s life.” <br> <b> - Oprah Winfrey</b> </p>
     </div>
   </div>
 
@@ -119,7 +123,7 @@
 
   <!-- Login-Signup  -->
 
-  <div class="login-signup-div">
+  <div class="login-signup-div" id="login-signup">
 
     <h1>Login/Sign Up</h1>
 
@@ -307,6 +311,23 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        document.getElementById('navbar_top').classList.add('fixed-top');
+        // add padding top to show content behind navbar
+        navbar_height = document.querySelector('.navbar').offsetHeight;
+        document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('navbar_top').classList.remove('fixed-top');
+         // remove padding top from body
+        document.body.style.paddingTop = '0';
+      } 
+  });
+}); 
+    </script>
 </body>
 
 </html>

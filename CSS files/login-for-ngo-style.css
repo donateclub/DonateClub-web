@@ -1,5 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #74f9ff;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #brand-logo-image{
@@ -12,9 +17,16 @@ body{
     display: inline-block;
 }
 
+
 .nav-color{
-    background-color: #00e0ff;
+    background-color: #74f9ff;
+    transition:  border 2s ease-in-out;
 }
+.nav-color a:hover {
+    border-bottom: 3px solid #b34180;
+  }
+
+
 
 .main-box{
     width: 345px;
