@@ -1,172 +1,276 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../CSS files/homepage-style.css" />
-    <link rel="stylesheet" href="../CSS files/products-style.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../CSS files/homepage-style.css" />
+  <link rel="stylesheet" href="../CSS files/products-style.css" />
 
 
-    <!-- fonts style  -->
+  <!-- fonts style  -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
   <style>
-    .change-clr{
-    background-color: white;
-    opacity: 0.5;
-  }
+    .change-clr {
+      background-color: white;
+      opacity: 0.5;
+    }
 
-</style>
-    <title>Donation Club</title>
-  </head>
+    h1 {
+      margin-top: 100px;
+      margin-bottom: 40px;
+    }
 
-  <body>
-    <!-- NAVIGATION BAR  -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light nav-color navbar-transparent" id="navbar_top">
-      <a class="navbar-brand" href="#">
-        <img id="brand-logo-image" src="../Images/brand-logo.png" />
-        <h3 id="brand-logo-content">Donation Club</h3>
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    .image-div {
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <!-- Home -->
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
+      width: 100%;
+      height: 10%;
+      padding: 0% 28%;
+    }
+  </style>
+  <title>Donation Club</title>
+</head>
 
-          <!-- About Us -->
-          <li class="nav-item">
-            <a class="nav-link" href="../HTML files/AboutUs.html">About Us</a>
-          </li>
+<body>
+  <!-- NAVIGATION BAR  -->
+  <nav class="navbar navbar-expand-lg navbar-light nav-color navbar-transparent" id="navbar_top">
+    <a class="navbar-brand" href="#">
+      <img id="brand-logo-image" src="../Images/brand-logo.png" />
+      <h3 id="brand-logo-content">Donation Club</h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <!-- Issues and Views -->
-          <li class="nav-item">
-            <a class="nav-link" href="../HTML files/IssuesAndViews.html"
-              >Issues and Views</a
-            >
-          </li>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <!-- Home -->
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
 
-          <!-- Products -->
-          <li class="nav-item">
-            <a class="nav-link" href="../HTML files/products.html">Products</a>
-          </li>
+        <!-- About Us -->
+        <li class="nav-item">
+          <a class="nav-link" href="../HTML files/AboutUs.html">About Us</a>
+        </li>
 
-          <!-- Blog -->
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog-Page</a>
-          </li>
+        <!-- Issues and Views -->
+        <li class="nav-item">
+          <a class="nav-link" href="../HTML files/IssuesAndViews.html">Issues and Views</a>
+        </li>
 
-          <!-- Contact Us -->
-          <li class="nav-item">
-            <a class="nav-link" href="#ContactUs">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <!-- Products -->
+        <li class="nav-item">
+          <a class="nav-link" href="../HTML files/products.html">Products</a>
+        </li>
 
-<div class="row align-items-start" id="ngo">
-    
+        <!-- Blog -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog-Page</a>
+        </li>
+
+        <!-- Contact Us -->
+        <li class="nav-item">
+          <a class="nav-link" href="#ContactUs">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+  <!-- ngo information -->
+
+
+  <h1 style="text-align: center;">NGO information</h1>
+  <div class="row align-items-start" id="ngo">
+
+
+    <div class="image-div container">
+      <img src="https://picsum.photos/200" class="user-img">
+    </div>
+
+    <div class="container" style="margin-top: 5%;">
+      <table class="table table-borderless">
+        <tbody>
+          <tr class="table-light">
+            <th scope="row">Title:</th>
+            <td>Red Cross Society</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Rating:</th>
+            <td>4✨</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Year established:</th>
+            <td>2005</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Country:</th>
+            <td>India</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">State:</th>
+            <td>Punjab</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">City:</th>
+            <td>Mohali</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Pincode:</th>
+            <td>160002</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Issue:</th>
+            <td>Flood</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Phone Number:</th>
+            <td>+91-8812456854</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Email:</th>
+            <td>abc@gmail.com</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Website:</th>
+            <td>www.google.com</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Description:</th>
+            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga cumque reprehenderit quisquam atque dignissimos itaque culpa quam consequuntur iusto voluptates asperiores enim maiores fugit possimus dicta earum, dolor ullam. Omnis?</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
   </div>
 
+<hr>
+
+
+    <!-- Request Products form  -->
+    
+    
+    
+    <div class="request-products-div">
+      
+      <h1 style="text-align: center;">Request Products</h1>
+
+    <div class="write-us-div">
+        <form>
+            
+                <div class="form-group">
+                    <label for="prodName">Product name</label>
+                    <input type="text" class="form-control" id="prodName" placeholder="Product name">
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" placeholder="quantity">
+                </div>
+
+            <div class="form-group">
+                <label for="Deadline">Deadline</label>
+                <input type="date" class="form-control" id="Deadline">
+            </div>
+            <div class="form-group">
+                <label for="Description">Description</label>
+                <textarea class="form-control" id="Description" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Product image</label>
+              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <footer class="footer-class">
-      <a href="#">
-        <img
-          class="footer-icon1"
-          src="../Images/facebook-footer-icon.svg"
-          height="20%"
-          width="auto"
-        />
-      </a>
-      <a href="#">
-        <img
-          class="footer-icon2"
-          src="../Images/twitter-footer.svg"
-          height="20%"
-          width="auto"
-        />
-      </a>
-      <a href="#">
-        <img
-          class="footer-icon3"
-          src="../Images/instagram-footer.svg"
-          height="20%"
-          width="auto"
-        />
-      </a>
+    <a href="#">
+      <img class="footer-icon1" src="../Images/facebook-footer-icon.svg" height="20%" width="auto" />
+    </a>
+    <a href="#">
+      <img class="footer-icon2" src="../Images/twitter-footer.svg" height="20%" width="auto" />
+    </a>
+    <a href="#">
+      <img class="footer-icon3" src="../Images/instagram-footer.svg" height="20%" width="auto" />
+    </a>
 
-      <p>Copyright @ 2021 Donation Club. All Rights Reserved.</p>
-    </footer>
+    <p>Copyright @ 2021 Donation Club. All Rights Reserved.</p>
+  </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        window.addEventListener('scroll', function () {
-          if (window.scrollY > 50) {
-            document.getElementById('navbar_top').classList.add('fixed-top');
-            document.getElementById('navbar_top').classList.add('change-clr');
-            // add padding top to show content behind navbar
-            navbar_height = document.querySelector('.navbar').offsetHeight;
-            document.body.style.paddingTop = navbar_height + 'px';
-          } else {
-            document.getElementById('navbar_top').classList.remove('fixed-top');
-            document.getElementById('navbar_top').classList.remove('change-clr');
-            // remove padding top from body
-            document.body.style.paddingTop = '0';
-          }
-        });
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+          document.getElementById('navbar_top').classList.add('fixed-top');
+          document.getElementById('navbar_top').classList.add('change-clr');
+          // add padding top to show content behind navbar
+          navbar_height = document.querySelector('.navbar').offsetHeight;
+          document.body.style.paddingTop = navbar_height + 'px';
+        } else {
+          document.getElementById('navbar_top').classList.remove('fixed-top');
+          document.getElementById('navbar_top').classList.remove('change-clr');
+          // remove padding top from body
+          document.body.style.paddingTop = '0';
+        }
       });
-    </script>
+    });
+  </script>
 
-    <script>
+  <script>
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('item');
-      fetch("http://localhost:8000/main/ngos/"+myParam+"/")
-        .then((response) => response.json())
-        .then((ngo) => document.getElementById("ngo").innerHTML +=
-        '<div class="col"> <div class="row"> <img src="'+ngo.image+'" width=80> </div>'+ngo.title+' <div class="row"></div> </div> <div class="col"> <div class="row"> '+ngo.rating+'/10 </div> <div class="row"> '+ngo.description+' </div> </div> <div class="col"> <div class="row"> '+ngo.year_established+' </div> <div class="row"> By '+ngo.city + ','+ngo.state + ','+ngo.country+","+ngo.pincode +' </div> <div class="row">phone No. '+ngo.phone_number+' </div><div class="row"> '+ngo.email+' </div> </div>');
-    
-    </script>
-  </body>
+    fetch("http://localhost:8000/main/ngos/" + myParam + "/")
+      .then((response) => response.json())
+      .then((ngo) => document.getElementById("ngo").innerHTML +=
+        '<div class="col"> <div class="row"> <img src="' + ngo.image + '" width=80> </div>' + ngo.title + ' <div class="row"></div> </div> <div class="col"> <div class="row"> ' + ngo.rating + '/10 </div> <div class="row"> ' + ngo.description + ' </div> </div> <div class="col"> <div class="row"> ' + ngo.year_established + ' </div> <div class="row"> By ' + ngo.city + ',' + ngo.state + ',' + ngo.country + "," + ngo.pincode + ' </div> <div class="row">phone No. ' + ngo.phone_number + ' </div><div class="row"> ' + ngo.email + ' </div> </div>');
+
+  </script>
+</body>
+
 </html>
