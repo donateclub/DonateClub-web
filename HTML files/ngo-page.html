@@ -107,7 +107,7 @@
 
 
     <div class="image-div container">
-      <img src="https://picsum.photos/200" class="user-img">
+      <img src="https://picsum.photos/200" class="user-img" id="ngo-img">
     </div>
 
     <div class="container" style="margin-top: 5%;">
@@ -115,51 +115,51 @@
         <tbody>
           <tr class="table-light">
             <th scope="row">Title:</th>
-            <td>Red Cross Society</td>
+            <td id="ngo-title">Red Cross Society</td>
           </tr>
           <tr class="table-light">
             <th scope="row">Rating:</th>
-            <td>4✨</td>
+            <td id="ngo-rating">4✨</td>
           </tr>
           <tr class="table-light">
             <th scope="row">Year established:</th>
-            <td>2005</td>
+            <td id="ngo-year">2005</td>
           </tr>
           <tr class="table-light">
             <th scope="row">Country:</th>
-            <td>India</td>
+            <td id="ngo-country">India</td>
           </tr>
           <tr class="table-light">
             <th scope="row">State:</th>
-            <td>Punjab</td>
+            <td id="ngo-state">Punjab</td>
           </tr>
           <tr class="table-light">
             <th scope="row">City:</th>
-            <td>Mohali</td>
+            <td id="ngo-city">Mohali</td>
           </tr>
           <tr class="table-light">
             <th scope="row">Pincode:</th>
-            <td>160002</td>
+            <td id="ngo-pin">160002</td>
           </tr>
           <tr class="table-light">
             <th scope="row">Issue:</th>
-            <td>Flood</td>
+            <td id="ngo-issue">Flood</td>
           </tr>
           <tr class="table-light">
             <th scope="row">Phone Number:</th>
-            <td>+91-8812456854</td>
+            <td id="ngo-number">+91-8812456854</td>
           </tr>
           <tr class="table-light">
             <th scope="row">Email:</th>
-            <td>abc@gmail.com</td>
+            <td id="ngo-email">abc@gmail.com</td>
           </tr>
           <tr class="table-light">
             <th scope="row">Website:</th>
-            <td>www.google.com</td>
+            <td id="ngo-site">www.google.com</td>
           </tr>
           <tr class="table-light">
             <th scope="row">Description:</th>
-            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga cumque reprehenderit quisquam atque dignissimos itaque culpa quam consequuntur iusto voluptates asperiores enim maiores fugit possimus dicta earum, dolor ullam. Omnis?</td>
+            <td id="ngo-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga cumque reprehenderit quisquam atque dignissimos itaque culpa quam consequuntur iusto voluptates asperiores enim maiores fugit possimus dicta earum, dolor ullam. Omnis?</td>
           </tr>
         </tbody>
       </table>
@@ -273,13 +273,27 @@
   </script>
 
   <script>
+  async function f() {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('item');
-    fetch("http://localhost:8000/main/ngos/" + myParam + "/")
-      .then((response) => response.json())
-      .then((ngo) => document.getElementById("ngo").innerHTML +=
-        '<div class="col"> <div class="row"> <img src="' + ngo.image + '" width=80> </div>' + ngo.title + ' <div class="row"></div> </div> <div class="col"> <div class="row"> ' + ngo.rating + '/10 </div> <div class="row"> ' + ngo.description + ' </div> </div> <div class="col"> <div class="row"> ' + ngo.year_established + ' </div> <div class="row"> By ' + ngo.city + ',' + ngo.state + ',' + ngo.country + "," + ngo.pincode + ' </div> <div class="row">phone No. ' + ngo.phone_number + ' </div><div class="row"> ' + ngo.email + ' </div> </div>');
-
+    let ngo = await fetch("http://localhost:8000/main/ngos/" + myParam + "/")
+      .then((response) => response.json());
+    document.getElementById("ngo-title").innerHTML = ngo.title;
+    document.getElementById("ngo-rating").innerHTML = ngo.rating + '✨';
+    document.getElementById("ngo-year").innerHTML = ngo.year_established;
+    document.getElementById("ngo-desc").innerHTML = ngo.description;
+    document.getElementById("ngo-country").innerHTML = ngo.country;
+    document.getElementById("ngo-state").innerHTML = ngo.state;
+    document.getElementById("ngo-city").innerHTML = ngo.city;
+    document.getElementById("ngo-pin").innerHTML = ngo.pincode;
+    let issue = await fetch("http://localhost:8000/main/issues/" + ngo.issue + "/")
+      .then((response) => response.json());
+    document.getElementById("ngo-issue").innerHTML = issue.name;
+    document.getElementById("ngo-number").innerHTML = ngo.phone_number;
+    document.getElementById("ngo-img").src=ngo.image;
+  }
+  f();
+    
   </script>
 </body>
 

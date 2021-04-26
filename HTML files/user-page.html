@@ -166,7 +166,7 @@
 
 
         <div class="image-div container">
-            <img src="https://picsum.photos/200" class = "user-img">
+            <img src="https://picsum.photos/200" class = "user-img" id="user-img">
         </div>
 
         <div class="container" style="margin-top: 5%;">
@@ -174,27 +174,27 @@
                 <tbody>
                   <tr class="table-light">
                     <th scope="row">Full Name:</th>
-                    <td>Robert Brown</td>
+                    <td id="user-name">Robert Brown</td>
                   </tr>
                   <tr class="table-light">
                     <th scope="row">Email:</th>
-                    <td>abc@gmail.com</td>
+                    <td id="user-email">abc@gmail.com</td>
                   </tr>
                   <tr class="table-light">
                     <th scope="row">Phone Number:</th>
-                    <td>+91-8812456854</td>
+                    <td id="user-number">+91-8812456854</td>
                   </tr>
                   <tr class="table-light">
                     <th scope="row">Country:</th>
-                    <td>India</td>
+                    <td id="user-country">India</td>
                   </tr>
                   <tr class="table-light">
                     <th scope="row">State:</th>
-                    <td>Punjab</td>
+                    <td id="user-state">Punjab</td>
                   </tr>
                   <tr class="table-light">
                     <th scope="row">City:</th>
-                    <td>Mohali</td>
+                    <td id="user-city">Mohali</td>
                   </tr>
                   
                 </tbody>
@@ -215,31 +215,8 @@
     </h1>
 
 
-    <div style="display: flex;flex-wrap: wrap;" class="products">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://picsum.photos/200" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Product 1</h5>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://picsum.photos/200" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Product 2</h5>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://picsum.photos/200" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Product 3</h5>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="https://picsum.photos/200" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Product 4</h5>
-            </div>
-          </div>
+    <div style="display: flex;flex-wrap: wrap;" class="products" id="products">
+        
     </div>
 
 
@@ -294,6 +271,35 @@
                 }
             });
         });
+
+       async function f() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('item');
+    let user = await fetch("http://localhost:8000/main/users/" + myParam + "/")
+      .then((response) => response.json());
+    document.getElementById("user-name").innerHTML = user.username;
+    document.getElementById("user-country").innerHTML = user.country;
+    document.getElementById("user-state").innerHTML = user.state;
+    document.getElementById("user-city").innerHTML = user.city;
+    document.getElementById("user-number").innerHTML = user.phone_number;
+    document.getElementById("user-email").innerHTML = user.email;
+    document.getElementById("user-img").src=user.image;
+
+    user.products.forEach(productAdd);
+  }
+
+  async function productAdd(item, index) {
+      let product = await fetch("http://localhost:8000/main/products/" + item + "/")
+      .then((response) => response.json());
+      document.getElementById("products").innerHTML +=`<div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="`+ product.image + `" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">`+product.title +`</h5>
+            </div>
+          </div>`
+  }
+
+  f();
     </script>
 </body>
 
