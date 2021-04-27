@@ -199,11 +199,7 @@
                 <label for="Description">Description</label>
                 <textarea class="form-control" id="Description" rows="3"></textarea>
             </div>
-            <div class="form-group">
-              <label for="exampleFormControlFile1">Product image</label>
-              <input type="file" class="form-control-file" id="exampleFormControlFile1">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="submitProduct(event)">Submit</button>
         </form>
 
     </div>
@@ -293,6 +289,55 @@
     document.getElementById("ngo-img").src=ngo.image;
   }
   f();
+  async function submitProduct(e){
+    console.log("Hey");
+            e.preventDefault();
+
+            var title = document.getElementById("prodName").value;
+
+            var required = parseInt(document.getElementById("quantity").value);
+
+            var deadline = document.getElementById("Deadline").value;
+            
+            var description = document.getElementById("Description").value;
+            image = null;
+            donated = 0;
+
+            let d = new Date();
+            let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+            let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d);
+            let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+            let hh = new Intl.DateTimeFormat('en', { hour: '2-digit' }).format(d);
+            let mm = new Intl.DateTimeFormat('en', { minute: '2-digit' }).format(d);
+            date_published = `${ye}-${mo}-${da} ${hh.substring(0, 2)}:${mm}`;
+            date_edited = date_published;
+            ngo  =1;
+            issue = 1;
+            let product = {
+                title:title,
+                required: required,
+                deadline : date_published,
+                description: description,
+                image: image,
+                donated:donated,
+                ngo:ngo,
+                issue:issue
+            };
+            console.log( JSON.stringify(product));
+            let response = await fetch('http://127.0.0.1:8000/main/products/', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json;charset=utf-8',
+                    'Authorization': 'Token 2f4dbcbf9359ce5b683a639185fffa0a0de29bc4'
+                },
+                body: JSON.stringify(product)
+            });
+
+            let result = await response.json();
+
+
+        }
+        
     
   </script>
 </body>
