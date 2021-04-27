@@ -217,62 +217,8 @@ html {
     </div>
   </nav>
 
+<div id ="blogs">
 
-<div class="card bg-light mb-3 container" style="max-width: 80%;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Primary card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card bg-light mb-3 container" style="max-width: 80%;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Secondary card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card bg-light mb-3 container" style="max-width: 80%;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card bg-light mb-3 container" style="max-width: 80%;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Danger card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card bg-light mb-3 container" style="max-width: 80%;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Warning card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card bg-light mb-3 container" style="max-width: 80%;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Info card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card bg-light mb-3 container" style="max-width: 80%;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Light card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card bg-light mb-3 container" style="max-width: 80%;">
-  <div class="card-header">Header</div>
-  <div class="card-body">
-    <h5 class="card-title">Dark card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
 </div>
 
 
@@ -303,7 +249,7 @@ html {
      <label for="blogContent">Message</label>
      <textarea class="form-control" id="blogContent" rows="5"></textarea>
    </div>
-   <button type="submit" class="btn btn-primary">Submit</button>
+   <button type="submit" class="btn btn-primary" onclick="f(event)">Submit</button>
  </form>    
 
 </div>
@@ -504,6 +450,69 @@ html {
       });
     });
   </script>
+
+  
+
+    <script>
+      fetch("http://localhost:8000/main/blogs/")
+        .then((response) => response.json())
+        .then((blogs) => blogs.forEach(addBlog));
+      function addBlog(item, index) {
+        document.getElementById("blogs").innerHTML +=
+          `<div class="card bg-light mb-3 container" style="max-width: 80%;">
+            <div class="card-header">`+item.date_published+`</div>
+            <div class="card-body">
+              <h5 class="card-title">`+item.title+`</h5>
+              <p class="card-text">`+item.body+`.</p>
+            </div>
+          </div>`
+      }
+
+      async function f(e){
+            e.preventDefault();
+
+            var name = document.getElementById("blogName").value;
+
+            var email = document.getElementById("bloginputEmail4").value;
+
+            var title = document.getElementById("blogTitle").value;
+            
+            var body = document.getElementById("blogContent").value;
+
+            let d = new Date();
+            let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+            let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d);
+            let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+            let hh = new Intl.DateTimeFormat('en', { hour: 'numeric' }).format(d);
+            let mm = new Intl.DateTimeFormat('en', { minute: 'numeric' }).format(d);
+            date_published = `${ye}-${mo}-${da} ${hh.substring(0, 2)}:${mm}`;
+            date_edited = date_published;
+            ngo  =1;
+            issue = 1;
+            let blog = {
+                title:title,
+                body: body,
+                date_published : date_published,
+                ngo: ngo,
+                issue: issue,
+                date_edited:date_edited
+            };
+            console.log( JSON.stringify(blog));
+            let response = await fetch('http://127.0.0.1:8000/main/blogs/', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json;charset=utf-8',
+                    'Authorization': 'Token 2f4dbcbf9359ce5b683a639185fffa0a0de29bc4'
+                },
+                body: JSON.stringify(blog)
+            });
+
+            let result = await response.json();
+
+
+        }
+        
+    </script>
 </body>
 
 </html>
