@@ -122,7 +122,7 @@
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-primary"  onclick="f(event)">Login</button>
               </form>
         </div>
     </main>
@@ -181,5 +181,60 @@
               });
             });
           </script>
+
+          <script>
+async function f(e) {
+    e.preventDefault();
+    var email = document.getElementById("exampleInputEmail1").value;
+    var pass = document.getElementById("exampleInputPassword1").value;
+   let user = {
+  username: email,
+  password: pass
+};
+
+let response = await fetch('http://localhost:8000/auth/token/login/', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8'
+  },
+  body: JSON.stringify(user)
+});
+
+let result = await response.json();
+
+setCookie('auth_token',result.auth_token,7);
+
+var x = getCookie('auth_token');
+if (x) {
+    alert(x);
+}
+}
+
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {   
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+   
+</script>
 </body>
+
+
 </html>

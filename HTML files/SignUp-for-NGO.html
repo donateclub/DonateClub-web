@@ -133,7 +133,7 @@
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 
-                <button type="submit" class="btn btn-success">Create Account</button>
+                <button type="submit" class="btn btn-success" onclick="f(event)">Create Account</button>
               </form>
         </div>
     </main>
@@ -191,6 +191,36 @@
                 }
               });
             });
+          </script>
+
+          <script>
+          async function f(e){
+            e.preventDefault();
+
+            var username = document.getElementById("ngo-name").value;
+
+            var email = document.getElementById("exampleInputEmail1").value;
+
+            var password = document.getElementById("exampleInputPassword1").value;
+
+            let user = {
+                username : username,
+                email: email,
+                password: password
+            };
+            console.log(JSON.stringify(user));
+            let response = await fetch('http://127.0.0.1:8000/auth/users/', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(user)
+            });
+
+            let result = await response.json();
+
+
+        }
           </script>
 </body>
 </html>
