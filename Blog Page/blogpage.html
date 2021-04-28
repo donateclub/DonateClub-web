@@ -483,8 +483,8 @@ html {
             let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
             let mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d);
             let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
-            let hh = new Intl.DateTimeFormat('en', { hour: 'numeric' }).format(d);
-            let mm = new Intl.DateTimeFormat('en', { minute: 'numeric' }).format(d);
+            let hh = new Intl.DateTimeFormat('en', { hour: '2-digit' }).format(d);
+            let mm = new Intl.DateTimeFormat('en', { minute: '2-digit' }).format(d);
             date_published = `${ye}-${mo}-${da} ${hh.substring(0, 2)}:${mm}`;
             date_edited = date_published;
             ngo  =1;
