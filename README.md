@@ -30,5 +30,6 @@ marketing channel.
 
 <br>
 <h3> Technonlogies used </h3>
-<img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" style = "display:'inline-block';">
+<img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64">
 <img src="https://ucarecdn.com/f49e8fc4-876f-49ef-934f-89812fc4125e/" width="63" height="64">
+<img src="https://miro.medium.com/max/720/1*LjR0UrFB2a__5h1DWqzstA.png" width="63" height="64">
