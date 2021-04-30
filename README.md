@@ -30,5 +30,5 @@ marketing channel.
 
 <br>
 <h3> Technonlogies used </h3>
-<img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64">
+<img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" style = "display:'inline-block';">
 <img src="https://perishablepress.com/wp/wp-content/images/2008/misc-chunks/css-logo.jpg" width="63" height="64">
