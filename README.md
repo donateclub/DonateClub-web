@@ -1,11 +1,14 @@
-##Donate Club: Donation listing platform for NGO's
+#Donate Club: Donation listing platform for NGO's
 
 **Problem Statement**
+<br>
 Many people want to donate things and their time for a better cause and
 NGO’s and other organizations need donations. But they often find difficulty
 finding each other. This is due to an absence of a centralized system
 connecting the two.
+<br>
 **Solution**
+<br>
 Our team has come up with an ONLINE PLATFORM that will help to connect
 the people who want to donate and NGO’s who want their donations.
 DonateClub will provide a listing platform for donations and services, a
