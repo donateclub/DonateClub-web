@@ -26,3 +26,10 @@ to donate their time will be able to APPLY for the same
 NGO’s will be able to have a BLOG that can showcase what they have been
 doing and what are their plans for the future and this may act as their
 marketing channel.
+
+
+<br>
+<h3> Technonlogies used </h3>
+<a href="http://www.w3.org/html/logo/">
+<img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" width="63" height="64" alt="HTML5 Powered" title="HTML5 Powered">
+</a>
